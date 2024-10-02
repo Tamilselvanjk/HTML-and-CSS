@@ -1,0 +1,52 @@
+.square {
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    /*transition-duration: 3s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.9,-0.07, 1, 1);
+    transition-delay: 1s;*/
+    /* transition: background-color 3s 1s linear; */
+
+
+}
+
+.square:hover {
+    /* background-color: blueviolet;
+    width: 600px; */
+    transform: translatex(-100px);
+
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    background-color: lightcoral;
+    border-radius: 50%;
+    animation-name: circle;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 3;
+    animation-direction: reverse;
+
+}
+
+@keyframes circle {
+    0% {
+        background-color: rgb(0, 180, 252);
+        left: 0px;
+        top: 0px;
+
+    }
+
+
+    100% {
+        background-color: rgb(11, 245, 11);
+        width: 150px;
+        height: 150px;
+        left: 600px;
+        top: 600px;
+
+    }
+}

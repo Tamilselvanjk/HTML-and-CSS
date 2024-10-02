@@ -1,0 +1,86 @@
+body {
+    background-color: bisque;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 1fr 2fr 1fr;
+    gap: 20px;
+
+}
+
+.para {
+    padding: 1rem;
+    background-color: yellowgreen;
+
+
+}
+
+.outerbox {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 200px;
+    grid-auto-rows: 200px;
+    gap: 20px;
+    align-items: center;
+    /*justify-content: stretch;*/
+    justify-items: stretch;
+
+}
+
+.box {
+    background-color: rgb(79, 255, 79);
+    color: white;
+    font-size: 4rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1 {
+    justify-self: center;
+}
+
+.layout div {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 197, 120);
+    border: 1px solid rgb(0, 0, 0);
+    font-size: 2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-areas:
+        " h h  h"
+        " sd1 m sd2 "
+        " f f f ";
+}
+
+.header {
+    grid-area: h;
+}
+
+.siderbar1 {
+    grid-area: sd1;
+}
+
+.maincontant {
+    grid-area: m;
+}
+
+.sidebar2 {
+    grid-area: sd2;
+}
+
+.footer {
+    grid-area: f;
+
+}
