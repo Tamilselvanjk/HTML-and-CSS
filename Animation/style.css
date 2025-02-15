@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+   
+    background-color: red;
+    transition: 1s;
+    
+    
+    /* animation: box; */
+    /* animation-name: box;
+    animation-duration: 3s;
+    animation-iteration-count:3s;
+    animation-delay: 1s; */
+    /* animation-direction: alternate-reverse; */
+    /* animation-timing-function: linear;*/
+
+    /* animation: box 3s linear 2s 3 alternate-reverse; */
+
+    /* transform: perspective(200px) rotateX(50deg);?\ */
+
+   position: relative;
+    
+}
+
+@keyframes box {
+    /* from{
+       transform: translateX(-500px) rotate(-360deg) skew(80deg)
+    }
+    to{
+      transform: translateX(500px) translateY(200px) skew(-80deg);
+    } */
+    25%{
+       transform: translateX(300px) rotate(360deg);
+    } 
+    50%{
+       transform: translateY(300px) rotate(-360deg);
+    }
+    75%{
+        transform: translateX(-300px) rotate(360deg);
+    }
+    100%{
+        transform: translateY(-300px) rotate(-360deg);
+    }
+}
+
+/* 
+.box:hover{
+    transform-origin: top;
+    transform: perspective(150px) rotateX(180deg);
+} */
+
+.box::before{
+    content: 'Hi dude';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color:rgb(27, 195, 214);
+    right: 100%;
+    top: 100%;
+}
+
+.box::after{
+    content: 'Hi dude';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color:rgb(27, 214, 173);
+    bottom:100%;
+    left: 100%;
+}
+
+
